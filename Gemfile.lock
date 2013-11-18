@@ -30,7 +30,15 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.3)
     builder (3.0.4)
+    chunky_png (1.2.9)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    compass-rails (1.0.3)
+      compass (>= 0.12.2, < 0.14)
     erubis (2.7.0)
+    fssm (0.2.10)
     haml (4.0.4)
       tilt
     haml-rails (0.4)
@@ -77,6 +85,10 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     sass (3.2.12)
+    sass-rails (3.2.6)
+      railties (~> 3.2.0)
+      sass (>= 3.1.10)
+      tilt (~> 1.3)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -94,9 +106,12 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  compass (>= 0.11.3)
+  compass-rails
   haml
   haml-rails
   jquery-rails
   rails (= 3.2.13)
   sass
+  sass-rails
   sqlite3
