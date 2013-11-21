@@ -1,25 +1,13 @@
-%h1 Listing jobs
 
-%table
-  %tr
-    %th Title
-    %th Description
-    %th Company name
-    %th Details link
-    %th
-    %th
-    %th
+= link_to 'New Job', new_job_path, :class => "new_job_link"
 
+%ul
   - @jobs.each do |job|
-    %tr
-      %td= job.title
-      %td= job.description
-      %td= job.company_name
-      %td= job.details_link
-      %td= link_to 'Show', job
-      %td= link_to 'Edit', edit_job_path(job)
-      %td= link_to 'Destroy', job, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Job', new_job_path
+    %li
+      = link_to(job, :class => "job_link") do
+        %strong.job_title
+          = job.title
+        %span.description  
+          = job.description
+        
+      = link_to 'Edit', edit_job_path(job)
