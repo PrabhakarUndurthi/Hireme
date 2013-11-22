@@ -6,6 +6,7 @@ gem 'haml-rails'
 gem 'sass'
 gem "jquery-rails"
 gem "compass", ">= 0.11.3"
+gem "authlogic"
 
 
 group :assets do 

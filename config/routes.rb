@@ -1,4 +1,7 @@
 Hireme::Application.routes.draw do
+  resources :users
+
+
   resources :jobs
 
   root :to => 'jobs#index'
