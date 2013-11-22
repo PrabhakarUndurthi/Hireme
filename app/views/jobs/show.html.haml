@@ -1,18 +1,31 @@
 %p#notice= notice
 
-%p
-  %b Title:
-  = @job.title
-%p
-  %b Description:
-  = @job.description
-%p
-  %b Company name:
-  = @job.company_name
-%p
-  %b Details link:
-  = @job.details_link
 
-= link_to 'Edit', edit_job_path(@job)
-\|
-= link_to 'Back', jobs_path
+.job_show
+ 
+
+ .job_title
+   =@job.title
+
+
+   .company_name
+     = @job.company_name
+
+
+	 %p.job_description
+	 = @job.description
+
+
+	 = link_to 'Show More', @job.details_link
+	 = link_to 'Edit', edit_job_path(@job)
+	 \|
+
+	 = link_to 'BACK', jobs_path
+	 
+
+
+
+
+
+
+
