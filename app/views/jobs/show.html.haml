@@ -16,8 +16,9 @@
 	 = @job.description
 
 
-	 = link_to 'Show More', @job.details_link
+	 = link_to 'Show More', @job.details_link, :class => "details_link"
 	 = link_to 'Edit', edit_job_path(@job)
+	 = link_to 'Back', jobs_path
 	 \|
 
 	 = link_to 'BACK', jobs_path
