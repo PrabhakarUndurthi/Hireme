@@ -1,4 +1,6 @@
 Hireme::Application.routes.draw do
+  get "user_session/new"
+
   resources :users
 
 

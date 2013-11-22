@@ -8,12 +8,14 @@ gem "jquery-rails"
 gem "compass", ">= 0.11.3"
 gem "authlogic"
 
+gem 'sqlite3'
 
-group :assets do 
-	gem 'sass-rails'
-	gem 'compass-rails'
+
+#group :assets do 
+	#gem 'sass-rails'
+	#gem 'compass-rails'
 	#Add any compass extentions here.
-end
+#end
 
 
 
