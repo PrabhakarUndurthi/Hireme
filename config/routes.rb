@@ -1,10 +1,13 @@
 Hireme::Application.routes.draw do
   get "user_session/new"
 
+resources :user_session
   resources :users
 
-
   resources :jobs
+  match "/register" => "user#new", :as => :register
+  match "/sign-in" => "user_sessions#new", :as => :sign_in
+  match "/sign-out" => "user_sessions#destroy", :as => :sign_out
 
   root :to => 'jobs#index'
 

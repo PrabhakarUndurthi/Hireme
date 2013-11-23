@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
 
 # these two helper methods often used in this application .
-  helper_methods :current_user_session, :current_user
+  helper_method :current_user_session, :current_user
 
   private
 

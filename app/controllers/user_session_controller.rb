@@ -1,8 +1,8 @@
 class UserSessionController < ApplicationController
 
+
 	# When new user wants to register on the site
 	# It allocates new session.
-
 	def new
 		@user_session = UserSession.new
 end
@@ -26,6 +26,8 @@ if @user_session.save
 	else
 	  render :action => :new
 	  end
+	end
+	
 
 
 
@@ -36,7 +38,5 @@ if @user_session.save
   	current_user_session && current_user.destroy
   	falsh[:notice] = "You are now logged out !!!"
   	redirect_to jobs_url
-
    end
-
 end

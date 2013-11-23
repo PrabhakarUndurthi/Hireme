@@ -14,5 +14,15 @@
       #header
       %h1#logo
         Hireme!
+        &p.notice = falsh[:notice]
+        #user_bar
+        - if current_user
+        Logged In as  #{current_user.name}
+        |
+        = link_to "SignOut"user_session_url, :method => :delete
+        -else
+        = link_to "Register", register_url
+        |
+        = link_to "Sign In", sign_in_url
       = yield 
 
